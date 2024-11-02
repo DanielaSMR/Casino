@@ -9,10 +9,7 @@ public class Lanzador{
             if(i/4 == 0 && i != 0){
                 contador++;
             }
-            jugadoresNumC[i] = new Jugador("Hilo: " + (i),contador, b); // Tipo 0 para NumC
-            
-            /*jugadoresParImpar[i] = new Jugador(1); // Tipo 1 para ParImpar
-            jugadoresMartingala[i] = new Jugador(2); // Tipo 2 para Martingala*/
+            jugadoresNumC[i] = new Jugador("Hilo: " + (i),contador, b); 
         }
 
         Thread[] hilos = new Thread[jugadoresNumC.length];
@@ -21,10 +18,6 @@ public class Lanzador{
             hilos[i] = new Thread(jugadoresNumC[i]);
             hilos[i].start();
         }
-
-        /*for (Thread hilo : hilos) {
-            hilo.interrupt();
-        }*/
 
         for (Thread hilo : hilos) {
             try {

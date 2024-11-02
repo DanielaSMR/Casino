@@ -64,7 +64,6 @@ public class Jugador implements Runnable{
 
             apostar(apuesta);
             int resultado = 1+generador.nextInt(36);
-            System.out.println(nombre + " Tiene el resultado" + resultado);
             
             if(resultado == num){
                 ganar(apuesta * 36);
@@ -79,7 +78,6 @@ public class Jugador implements Runnable{
         if(dinero > apuesta){
             apostar(apuesta);
             int resultado = 1+generador.nextInt(36);
-            System.out.println(nombre + " Tiene el resultado" + resultado);
 
             if(resultado/2 == num/2){
                 ganar(20);
@@ -93,7 +91,6 @@ public class Jugador implements Runnable{
         if(dinero > apuesta){
             apostar(apuesta);
             int resultado = 1+generador.nextInt(36);
-            System.out.println(nombre + " Tiene el resultado" + resultado);
 
             if(resultado == num){
                 ganar(apuesta * 36);
